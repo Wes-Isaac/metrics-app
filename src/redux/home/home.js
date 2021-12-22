@@ -33,40 +33,45 @@ import axios from 'axios';
 
 
 const FETCH_DATA = 'store/home/FETCH_DATA';
-const RESERVE_DRAGONS = 'spaceX/dragons/RESERVE_DRAGONS';
-const CANCEL_DRAGONS_RESERVE = 'spaceX/dragons/CANCEL_DRAGONS';
+const ALTER_SELECTED = 'store/home/ALTER_SELECTED';
 const initialState = [];
 
-const dragonsReducer = (state = initialState, action) => {
+const homeReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
       return action.payload;
+    case ALTER_SELECTED: {
+      const updateState = state.map((country.id !== action.payload ?country : {...country, selected: true}));
+      return updateState;
+    }
+
     default:
       return state;
   }
 };
 
-const getDragonAction = (payload) => ({
+const getHomeAction = (payload) => ({
   type: FETCH_DATA,
   payload,
 });
 
-export const getDragons = () => (dispatch) => {
+export const alterSelected = (payload) => ({
+  type: ALTER_SELECTED,
+  payload,
+});
+
+export const getData = () => (dispatch) => {
   axios.get('https://api.covid19tracking.narrativa.com/api/2021-03-22').then((res) => {
     dispatch(
-      getDragonAction(Object.entries(res.data.dates['2021-03-22'].countries)),
+      getHomeAction(Object.entries(res.data.dates['2021-03-22'].countries).map(([name, info]) =>(
+        {
+          id:name,
+          info: info,
+          selected: false,
+        }
+      ))),
     );
   });
 };
 
-export const reserveDragons = (payload) => ({
-  type: RESERVE_DRAGONS,
-  payload,
-});
-
-export const cancelDragons = (payload) => ({
-  type: CANCEL_DRAGONS_RESERVE,
-  payload,
-});
-
-export default dragonsReducer;
+export default homeReducer;

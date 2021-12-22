@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDragons } from '../redux/home/home';
+import { getData } from '../redux/home/home';
 import Card from './Card';
 
 export default function Home() {
@@ -9,14 +9,14 @@ export default function Home() {
 
   useEffect(() => {
     if(countries.length === 0) {
-      dispatch(getDragons());
+      dispatch(getData());
     }
   }, []);
 
   return (
     <div className='card-container'>
-      {countries.map(([name,info]) => (
-        <Card key={name} name={name} info={info} />
+      {countries.map(({id,info, selected}) => (
+        <Card key={id} name={id} info={info} selected={selected} />
         
       ))}
     
