@@ -41,7 +41,7 @@ const homeReducer = (state = initialState, action) => {
     case FETCH_DATA:
       return action.payload;
     case ALTER_SELECTED: {
-      const updateState = state.map((country.id !== action.payload ?country : {...country, selected: true}));
+      const updateState = state.map((country) => (country.id !== action.payload ? country : {...country, selected: true}));
       return updateState;
     }
 
