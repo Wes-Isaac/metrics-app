@@ -41,8 +41,14 @@ const homeReducer = (state = initialState, action) => {
     case FETCH_DATA:
       return action.payload;
     case ALTER_SELECTED: {
-      const updateState = state.map((country) => (country.id !== action.payload ? country : {...country, selected: true}));
-      return updateState;
+      axios.get(`https://api.covid19tracking.narrativa.com/api/2021-03-22/country/${action.payload}`).then((res) =>{
+        console.log(res.data);
+
+      })
+      // let updateState;
+      // updateState = state.map((country) =>({...country, selected: false}));
+      // updateState = state.map((country) => (country.id !== action.payload ? country : {...country, selected: true}));
+      // return updateState;
     }
 
     default:
@@ -55,10 +61,12 @@ const getHomeAction = (payload) => ({
   payload,
 });
 
-export const alterSelected = (payload) => ({
-  type: ALTER_SELECTED,
-  payload,
-});
+// export const alterSelected = (payload) => ({
+//   type: ALTER_SELECTED,
+//   payload,
+// });
+
+// export const getCountryData = ()
 
 export const getData = () => (dispatch) => {
   axios.get('https://api.covid19tracking.narrativa.com/api/2021-03-22').then((res) => {

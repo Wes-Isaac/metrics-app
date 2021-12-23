@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { alterSelected } from '../redux/home/home';
+import { alterSelected } from '../redux/detail/detail';
 
 export default function Card({name, info, selected}) {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ export default function Card({name, info, selected}) {
 
   return (
     <div key={name} >
-      <Link className='link' id={name} to={`/detail/${name}`} onClick={(e) => {
+      <Link className='link' id={name} to={`/detail/${name}`} onClick={() => {
         selectHandler(name);
         console.log(selected);
       }}>
