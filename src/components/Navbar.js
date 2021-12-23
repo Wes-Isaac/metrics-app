@@ -8,7 +8,7 @@ export default function Navbar() {
       <div>
         <h1>Covid Stats</h1>
       </div>
-      <div>
+      <div className="icons">
         <FaMicrophone />
         <FiSettings />
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Info({info}) {
   return (
-    <div>
+    <div className="info">
       <p>Confirmed today: {info.today_new_confirmed}</p>
       <p>Today deaths: {info.today_new_deaths}</p>
       <p>Today recovered: {info.today_new_recovered}</p>

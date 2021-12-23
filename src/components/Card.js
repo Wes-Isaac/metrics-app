@@ -12,8 +12,8 @@ export default function Card({name, info}) {
       <Link className='link' id={name} to={`/detail/${name}`} onClick={() => {
       dispatch(getCountryData(name));
       }}>
-          <li >{name}</li>
-          <li>{info.today_confirmed}</li>
+          <h2 >{name}</h2>
+          <p>Total case : {info.today_confirmed}</p>
         </Link>
     </div>
   )

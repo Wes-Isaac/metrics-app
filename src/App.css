@@ -8,7 +8,13 @@
 
 body {
   background: rgba(20,58,182,0.637);
+  color: #fff;
 }
+
+a {
+  color: #fff;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -28,6 +34,10 @@ body {
   padding: 2px;
 }
 
+.icons svg {
+  margin: auto 3px;
+}
+
 .card {
  height: 200px; 
  width: 100%;
@@ -42,5 +52,30 @@ body {
 }
 
 .link:hover {
-  background: rgba(13, 49, 167, 0.651);
+  background: rgba(20, 55, 167, 0.507);
+}
+
+.detail-header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-header h2 {
+  margin-left: 5px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  text-align: start;
+}
+
+.info p {
+  margin: 5px;
 }
