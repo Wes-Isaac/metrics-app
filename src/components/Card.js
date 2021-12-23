@@ -8,7 +8,7 @@ export default function Card({name, info}) {
   const detail = useSelector((state) => state.detail);
 
   return (
-    <div key={name} >
+    <div key={name} className="card" >
       <Link className='link' id={name} to={`/detail/${name}`} onClick={() => {
       dispatch(getCountryData(name));
       }}>
