@@ -1,65 +1,56 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Covid Metric App
+ In this task, I will be working with the real live data from the Narrativa API. The app display different data that comes from the API. It's categorized by country. We have two pages in this web app.
 
-# Project Name
+   - Home page with a list of countries with some numeric data.
+   - Details page with detailed information about the selected country.
 
-> One paragraph statement about the project.
+# Screenshots
 
-![screenshot](./app_screenshot.png)
+- Home Page
 
-Additional description about the project and its features.
+![Home Page](https://user-images.githubusercontent.com/59416136/147358172-7d4151d1-27ef-4dea-b3d8-ffee038bb87e.png)
+
+- Detail Page
+
+![Detail Page](https://user-images.githubusercontent.com/59416136/147358119-df9eefd1-3210-4c9f-a487-10cfd4136a6d.png)
+
 
 ## Built With
+- React-Redux
+- CSS3
+- [Narrativa API](https://covid19tracking.narrativa.com/index_en.html)
 
-- Major languages
-- Frameworks
-- Technologies used
+### Technologies used
+- Github
+- Gitflow
+- Visual Studio Code
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Presentation Link](https://www.loom.com/share/2d58892a807a4546abb84f59329c79fe)
 
+[Live Demo Link](https://wonderful-newton-eacb6a.netlify.app/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+ To clone this project :
+* Run command: $git clone [repo](https://github.com/Wes-Isaac/metrics-app.git)
+* Or press the green Code button in the upper right corner and choose to download from the Download ZIP link.
+* Open terminal and type : 1-  npm install
+                           2-  npm run build.
+                           3-  npm start. 
+## Author
 
+:man:  Yishak
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [GitHub](https://github.com/Wes-Isaac)
+- [LinkedIn](https://www.linkedin.com/in/yishak-wesego-b404851a7/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Wes-Isaac/metrics-app/issues/new).
 
 ## Show your support
 
@@ -67,10 +58,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
