@@ -8,18 +8,16 @@ export default function Home() {
   const countries = useSelector((state) => state.home);
 
   useEffect(() => {
-    if(countries.length === 0) {
+    if (countries.length === 0) {
       dispatch(getData());
     }
   }, []);
 
   return (
-    <div className='card-container'>
-      {countries.map(({id,info, selected}) => (
+    <div className="card-container">
+      {countries.map(({ id, info, selected }) => (
         <Card key={id} name={id} info={info} selected={selected} />
-        
       ))}
-    
     </div>
   );
 }

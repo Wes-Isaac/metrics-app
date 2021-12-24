@@ -8,12 +8,11 @@ export default function Detail() {
   const detail = useSelector((state) => state.detail);
   let name;
   let info;
-  if(detail[0]) {
-    console.log(detail);
+  if (detail[0]) {
     name = detail[0].name;
     info = detail[0].info;
   }
- 
+
   return (
     <div>
       <div className="detail-header">

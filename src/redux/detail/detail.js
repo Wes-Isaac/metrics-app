@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const FETCH_COUNTRY_DATA = 'store/detail/FETCH_COUNTRY_DATA';
-const ALTER_SELECTED = 'store/detail/ALTER_SELECTED';
 const initialState = [];
 
 const detailReducer = (state = initialState, action) => {
@@ -21,10 +20,10 @@ const getDetailAction = (payload) => ({
 export const getCountryData = (name) => (dispatch) => {
   axios.get(`https://api.covid19tracking.narrativa.com/api/2021-03-22/country/${name}`).then((res) => {
     dispatch(
-      getDetailAction(Object.entries(res.data.dates['2021-03-22'].countries).map(([name, info]) =>(
+      getDetailAction(Object.entries(res.data.dates['2021-03-22'].countries).map(([name, info]) => (
         {
-          name:name,
-          info: info,
+          name,
+          info,
         }
       ))),
     );

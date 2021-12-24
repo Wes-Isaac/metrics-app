@@ -20,10 +20,10 @@ const getHomeAction = (payload) => ({
 export const getData = () => (dispatch) => {
   axios.get('https://api.covid19tracking.narrativa.com/api/2021-03-22').then((res) => {
     dispatch(
-      getHomeAction(Object.entries(res.data.dates['2021-03-22'].countries).map(([name, info]) =>(
+      getHomeAction(Object.entries(res.data.dates['2021-03-22'].countries).map(([name, info]) => (
         {
-          id:name,
-          info: info,
+          id: name,
+          info,
         }
       ))),
     );

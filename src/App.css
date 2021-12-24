@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
-  background: rgba(20,58,182,0.637);
+  background: rgba(20, 58, 182, 0.637);
   color: #fff;
 }
 
@@ -39,10 +42,10 @@ a {
 }
 
 .card {
- height: 200px; 
- width: 100%;
- border: 1px rgb(202, 199, 199) solid;
- display: flex;
+  height: 200px;
+  width: 100%;
+  border: 1px rgb(202, 199, 199) solid;
+  display: flex;
 }
 
 .link {
